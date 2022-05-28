@@ -1,6 +1,7 @@
 <h1>Edit Warga</h1>
 
-<form action="/warga/store" method="POST">
+<form action="/warga/{{ $warga->id }}" method="POST">
+    @method('put')
     @csrf
     <p>Nama :</p>
     <input type="text" placeholder="Masukkan Nama" name="nama" value="{{ $warga->nama }}">
